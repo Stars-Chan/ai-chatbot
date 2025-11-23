@@ -24,7 +24,7 @@
 - [AI SDK](https://ai-sdk.dev/docs/introduction)
   - Unified API for generating text, structured objects, and tool calls with LLMs
   - Hooks for building dynamic chat and generative user interfaces
-  - Supports xAI (default), OpenAI, Fireworks, and other model providers
+  - Supports DeepSeek (default), OpenAI, Anthropic, and other model providers
 - [shadcn/ui](https://ui.shadcn.com)
   - Styling with [Tailwind CSS](https://tailwindcss.com)
   - Component primitives from [Radix UI](https://radix-ui.com) for accessibility and flexibility
@@ -36,15 +36,23 @@
 
 ## Model Providers
 
-This template uses the [Vercel AI Gateway](https://vercel.com/docs/ai-gateway) to access multiple AI models through a unified interface. The default configuration includes [xAI](https://x.ai) models (`grok-2-vision-1212`, `grok-3-mini`) routed through the gateway.
+This template uses [DeepSeek AI](https://www.deepseek.com) models through an OpenAI-compatible interface. The default configuration includes:
 
-### AI Gateway Authentication
+- `deepseek-chat` - Advanced chat model with powerful reasoning capabilities
+- `deepseek-reasoner` - Specialized model for complex reasoning tasks
 
-**For Vercel deployments**: Authentication is handled automatically via OIDC tokens.
+### DeepSeek Authentication
 
-**For non-Vercel deployments**: You need to provide an AI Gateway API key by setting the `AI_GATEWAY_API_KEY` environment variable in your `.env.local` file.
+You need to provide a DeepSeek API key by setting the `DEEPSEEK_API_KEY` environment variable in your `.env.local` file.
 
-With the [AI SDK](https://ai-sdk.dev/docs/introduction), you can also switch to direct LLM providers like [OpenAI](https://openai.com), [Anthropic](https://anthropic.com), [Cohere](https://cohere.com/), and [many more](https://ai-sdk.dev/providers/ai-sdk-providers) with just a few lines of code.
+To get your API key:
+
+1. Visit [DeepSeek Platform](https://platform.deepseek.com)
+2. Sign up or log in to your account
+3. Navigate to API Keys section
+4. Create a new API key
+
+With the [AI SDK](https://ai-sdk.dev/docs/introduction), you can also switch to other LLM providers like [OpenAI](https://openai.com), [Anthropic](https://anthropic.com), [Cohere](https://cohere.com/), and [many more](https://ai-sdk.dev/providers/ai-sdk-providers) with just a few lines of code.
 
 ## Deploy Your Own
 
